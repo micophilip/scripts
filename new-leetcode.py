@@ -2,7 +2,7 @@ from datetime import datetime
 import sys
 import os
 
-now = datetime.utcnow()
+now = datetime.now()
 tag = sys.argv[1]
 post_title = sys.argv[2]
 jekyll_dir = os.getenv('JEKYLL_DIR')
