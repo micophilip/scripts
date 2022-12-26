@@ -2,10 +2,12 @@ from datetime import datetime
 import sys
 import os
 
-now = datetime.now()
+now = datetime.utcnow()
 tag = sys.argv[1]
 post_title = sys.argv[2]
 jekyll_dir = os.getenv('JEKYLL_DIR')
+date_only = now.strftime('%Y-%m-%d')
+timestamp = now.strftime('%Y-%m-%d %H:%M:%S')
 
 template = """---
 layout: post
@@ -31,7 +33,7 @@ def greet():
 $$\mathcal{O}(n\log{}n)$$
 
 TBD
-""" % (tag, f'{now.year}-{now.month}-{now.day} {now.hour}:{now.minute}:{now.second}')
+""" % (tag, timestamp)
 
-with open(f'{jekyll_dir}/_posts/{now.year}-{now.month}-{now.day}-{post_title}.md', 'w+') as f:
+with open(f'{jekyll_dir}/_posts/{date_only}-{post_title}.md', 'w+') as f:
   f.write(template)
