@@ -5,11 +5,11 @@ import argparse
 
 parser = argparse.ArgumentParser(description='Pomodoro helper')
 
-parser.add_argument('--no-break', dest='no_break', action='store_true', default=True, help='whether you are taking breaks')
-parser.add_argument('--no-short-break', dest='no_short_break', default=False, action='store_true', help='whether you are taking short breaks')
-parser.add_argument('--no-long-break', dest='no_long_break', default=False, action='store_true', help='whether you are taking long breaks')
-parser.add_argument('--p', dest='pomodoros', type=int, default=16, help='how many pomodoros you have left')
-parser.add_argument('--m', dest='partial', type=int, default=0, help='how many minutes of current pomodoro left')
+parser.add_argument('-no-break', dest='no_break', action='store_true', default=True, help='whether you are taking breaks')
+parser.add_argument('-no-short-break', dest='no_short_break', default=False, action='store_true', help='whether you are taking short breaks')
+parser.add_argument('-no-long-break', dest='no_long_break', default=False, action='store_true', help='whether you are taking long breaks')
+parser.add_argument('-p', dest='pomodoros', type=int, default=16, help='how many pomodoros you have left')
+parser.add_argument('-m', dest='partial', type=int, default=0, help='how many minutes of current pomodoro left')
 
 args = parser.parse_args()
 
