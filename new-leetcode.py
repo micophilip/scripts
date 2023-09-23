@@ -32,7 +32,13 @@ def greet():
 
 $$\mathcal{O}(n\log{}n)$$
 
-TBD
+## Lessons Learnt:
+
+## Notes:
+* [Link to Problem](<<EDIT ME>>)
+* [Link to Submission](<<EDIT ME>>)
+* Runtime beats <<EDIT ME>> of `python3` submissions
+* Memory usage beats <<EDIT ME>> of `python3` submissions
 """ % (tag, timestamp)
 
 with open(f'{jekyll_dir}/_posts/{date_only}-{post_title}.md', 'w+') as f:
