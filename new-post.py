@@ -1,8 +1,9 @@
 from datetime import datetime
+
 import sys
 import os
 
-now = datetime.now()
+now = datetime.now(datetime.UTC)
 tag = sys.argv[1]
 post_title = sys.argv[2]
 jekyll_dir = os.getenv('JEKYLL_DIR')
@@ -13,10 +14,10 @@ template = """---
 layout: post
 tag: %s
 title: <<EDIT ME>>
-category: blog
+category: posts
 excerpt_separator: <!--more-->
 author: mico
-date: %s
+date: %s UTC
 ---
 
 An introduction to the post topic
